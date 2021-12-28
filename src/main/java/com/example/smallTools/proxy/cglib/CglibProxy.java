@@ -29,7 +29,7 @@ public class CglibProxy implements MethodInterceptor {
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
         System.out.println("cglib before");
         if (method.getName().equals("sayHello")) {
-            System.out.println("test1");
+            System.out.println("test");
         }
         Object invoke = method.invoke(object, objects);
         System.out.println("cglib after");
