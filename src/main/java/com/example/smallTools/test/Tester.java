@@ -13,14 +13,14 @@ import java.util.List;
  * @Date: 2021/12/31 22:54
  */
 @Component
-public class Tester implements CommandLineRunner {
+public class Tester { // implements CommandLineRunner {
 
     @Resource
     private StudentService studentService;
 
-    @Override
-    public void run(String... args) throws Exception {
-        List<StudentModel> studentModelList = studentService.selectAll();
-        studentModelList.forEach(System.out::println);
-    }
+//    @Override
+//    public void run(String... args) throws Exception {
+//        List<StudentModel> studentModelList = studentService.selectAll();
+//        studentModelList.forEach(System.out::println);
+//    }
 }
