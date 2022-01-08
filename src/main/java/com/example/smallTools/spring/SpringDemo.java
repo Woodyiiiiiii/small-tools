@@ -34,10 +34,10 @@ public class SpringDemo implements ApplicationContextAware, InitializingBean, Co
     /**
      * 不报错
      */
-    @Override
+//    @Override
     public void run(String... args) throws Exception {
-        SpringDemo springDemo = applicationContext.getBean(SpringDemo.class);
-        System.out.println(springDemo);
+//        SpringDemo springDemo = applicationContext.getBean(SpringDemo.class);
+//        System.out.println(springDemo);
     }
 
     @Override
