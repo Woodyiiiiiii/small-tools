@@ -27,8 +27,8 @@ public class SpringDemo implements ApplicationContextAware, InitializingBean, Co
      */
     @Override
     public void afterPropertiesSet() throws Exception {
-        SpringDemo springDemo = applicationContext.getBean(SpringDemo.class);
-        System.out.println(springDemo);
+//        SpringDemo springDemo = applicationContext.getBean(SpringDemo.class);
+//        System.out.println(springDemo);
     }
 
     /**
