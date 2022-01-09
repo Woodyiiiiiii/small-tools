@@ -25,7 +25,7 @@ public final class CacheResponse<V, Err extends Exception> {
     }
 
     public boolean isSucceed() {
-        return exception == null;
+        return exception != null;
     }
 
     public static <V, Err extends Exception> CacheResponse<V, Err> success(boolean hasKey, V value) {
