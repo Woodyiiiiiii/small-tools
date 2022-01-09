@@ -3,6 +3,7 @@ package com.example.smallTools.service;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.smallTools.dao.StudentMapper;
 import com.example.smallTools.model.StudentModel;
+import com.example.smallTools.redis.DbOperate;
 import com.example.smallTools.redis.RedisCache;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +22,11 @@ public class StudentService extends ServiceImpl<StudentMapper, StudentModel> {
     @RedisCache
     public List<StudentModel> selectAll() {
         return baseMapper.selectList(null);
+    }
+
+    @RedisCache(dbOperate = DbOperate.UPDATE)
+    public void updateByOneId(StudentModel studentModel) {
+        baseMapper.updateById(studentModel);
     }
 
 }

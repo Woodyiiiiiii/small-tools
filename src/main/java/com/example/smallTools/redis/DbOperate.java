@@ -12,7 +12,7 @@ import lombok.Setter;
  */
 public enum DbOperate implements CacheProxy {
 
-    QUERY, INSERT, UPDATE, DELETE
+    QUERY(CacheStrategyEnum.QUERY), INSERT(CacheStrategyEnum.UPDATE), UPDATE, DELETE
     ;
 
     @Setter
@@ -73,7 +73,7 @@ public enum DbOperate implements CacheProxy {
 
             @Override
             public boolean isProcess(CacheResponse<?, ? extends Exception> cacheResponse) {
-                return cacheResponse.isSucceed() || cacheResponse.isHasKey();
+                return false;
             }
 
             @Override
