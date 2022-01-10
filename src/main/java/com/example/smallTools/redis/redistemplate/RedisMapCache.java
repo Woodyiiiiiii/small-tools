@@ -62,4 +62,18 @@ public class RedisMapCache {
         redisTemplate.delete(key(cacheKey));
     }
 
+    /**
+     * 分布式锁设置
+     */
+    public Boolean setRedisLock(String cacheKey, Object value, long timeout, TimeUnit timeUnit) {
+        return redisTemplate.opsForValue().setIfAbsent(cacheKey, value, timeout, timeUnit);
+    }
+
+    /**
+     * 分布式锁获取
+     */
+    public Object getRedisLock(String cacheKey) {
+        return redisTemplate.opsForValue().get(cacheKey);
+    }
+
 }

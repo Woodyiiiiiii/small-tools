@@ -103,6 +103,7 @@
         </dependency>
 
 <!--        redis-->
+<!--         遵循SpringBoot的版本，以免版本版本冲突-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
