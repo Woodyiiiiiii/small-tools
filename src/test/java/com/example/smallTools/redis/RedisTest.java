@@ -109,6 +109,11 @@ public class RedisTest {
         redisScript.setScriptSource(new ResourceScriptSource(new ClassPathResource("redislock.lua")));
     }
 
+    /**
+     * 使用lua脚本实现分布式锁
+     * 可以保证原子性
+     * 可以解决锁误解除的问题
+     */
     @Test
     public void testRedisLockWithLua() {
 
@@ -135,6 +140,7 @@ public class RedisTest {
                 if (currentValue != null && currentValue.equals(value)) {
                     log.info("key:{}, value:{}", key, JSONUtil.toJsonStr(currentValue));
 
+                    // 获取锁对象的同时释放锁，保证了原子性，不会出现锁误解除的问题
                     Object lua = redisMapCache.getRedisLockByLua(redisScript, Lists.newArrayList(key), value);
                     log.info("结果：1表示执行del，0表示未执行, {}", lua);
                     log.info("{} 释放锁成功", key);

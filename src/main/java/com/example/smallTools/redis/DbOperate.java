@@ -73,16 +73,15 @@ public enum DbOperate implements CacheProxy {
 
             @Override
             public boolean isProcess(CacheResponse<?, ? extends Exception> cacheResponse) {
+                // 更新无需缓存
                 return false;
             }
 
+            // 是否需要双删?
             @Override
             public CacheResponse<Void, Exception> endCache(CacheKeyResolver cacheKeyResolver, Object object) {
                 String key = cacheKeyResolver.getKey();
-                CacheResponse<Void, Exception> response = cache.hasKey(key);
-                if (response.isSucceed()) {
-                    cache.del(key);
-                }
+                cache.del(key);
                 return cache.set(cacheKeyResolver.getKey(), object);
             }
 
