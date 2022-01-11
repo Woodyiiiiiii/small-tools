@@ -2,9 +2,12 @@ package com.example.smallTools.redis.redistemplate;
 
 import org.apache.commons.lang3.BooleanUtils;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.script.DefaultRedisScript;
+import org.springframework.data.redis.core.script.RedisScript;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -74,6 +77,13 @@ public class RedisMapCache {
      */
     public Object getRedisLock(String cacheKey) {
         return redisTemplate.opsForValue().get(cacheKey);
+    }
+
+    /**
+     * 通过lua脚本获取锁
+     */
+    public Object getRedisLockByLua(RedisScript<?> redisScript, List<String> cacheKeyList, Object value) {
+        return redisTemplate.execute(redisScript, cacheKeyList, value);
     }
 
 }
