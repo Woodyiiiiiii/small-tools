@@ -113,6 +113,7 @@ public class RedisTest {
      * 使用lua脚本实现分布式锁
      * 可以保证原子性
      * 可以解决锁误解除的问题
+     * 无法解决redis集群时锁被多个线程拿的问题
      */
     @Test
     public void testRedisLockWithLua() {
