@@ -2,7 +2,7 @@
 
 ## download redis
 
-```aidl
+```
 brew install redis
 ```
 
@@ -22,7 +22,7 @@ ps -ef | grep redis
 ```
 
 启动redis客户端：
-```aidl
+```
 redis cli
 quit 关闭客户端
 ```
