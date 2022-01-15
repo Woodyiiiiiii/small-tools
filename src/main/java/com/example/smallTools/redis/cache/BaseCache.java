@@ -19,6 +19,7 @@ public class BaseCache implements Cache, InitializingBean {
     @Resource
     private RedisMapCache redisMapCache;
 
+    // 初始化后放置到DbOperate中
     @Override
     public void afterPropertiesSet() throws Exception {
         DbOperate.setCache(this);

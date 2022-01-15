@@ -68,7 +68,13 @@ public enum DbOperate implements CacheProxy {
 
             @Override
             public CacheResponse<Object, Exception> beginCache(CacheKeyResolver cacheKeyResolver) {
-                return cache.get(cacheKeyResolver.getKey());
+                String key = cacheKeyResolver.getKey();
+                CacheResponse<Void, Exception> cacheResponse = cache.del(key);
+                if (cacheResponse.isSucceed()) {
+                    return CacheResponse.success(cacheResponse.isHasKey(), cacheResponse.getValue());
+                } else {
+                    return CacheResponse.fail(cacheResponse.getException());
+                }
             }
 
             @Override
@@ -82,7 +88,7 @@ public enum DbOperate implements CacheProxy {
             public CacheResponse<Void, Exception> endCache(CacheKeyResolver cacheKeyResolver, Object object) {
                 String key = cacheKeyResolver.getKey();
                 cache.del(key);
-                return cache.set(cacheKeyResolver.getKey(), object);
+                return CacheResponse.success(false, null);
             }
 
         }

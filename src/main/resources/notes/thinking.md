@@ -9,4 +9,4 @@
    4. redisson lock
 
 2. idea
-   1. idea有包名规范，不能有冲突的包名，否则该package无法创建Java class，比如import，与Java关键字冲突了
+   1. idea有包名规范，不能有冲突的包名，否则该package无法创建Java class，比如import、class、int，与Java关键字冲突了
