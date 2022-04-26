@@ -1,4 +1,4 @@
-package com.example.smallTools.proxy;
+package com.example.smallTools.javabasic.proxy;
 
 /**
  * @Author: woodyiiiiiii

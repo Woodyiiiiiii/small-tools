@@ -1,4 +1,4 @@
-package com.example.smallTools.proxy.aspectapi;
+package com.example.smallTools.javabasic.proxy.aspectapi;
 
 import org.springframework.aop.MethodBeforeAdvice;
 import org.springframework.aop.aspectj.annotation.AspectJProxyFactory;

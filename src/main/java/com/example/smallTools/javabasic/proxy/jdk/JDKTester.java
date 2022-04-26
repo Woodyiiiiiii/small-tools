@@ -1,7 +1,7 @@
-package com.example.smallTools.proxy.jdk;
+package com.example.smallTools.javabasic.proxy.jdk;
 
-import com.example.smallTools.proxy.HelloService;
-import com.example.smallTools.proxy.HelloServiceImpl;
+import com.example.smallTools.javabasic.proxy.HelloService;
+import com.example.smallTools.javabasic.proxy.HelloServiceImpl;
 
 /**
  * @Description: JDK动态代理示例

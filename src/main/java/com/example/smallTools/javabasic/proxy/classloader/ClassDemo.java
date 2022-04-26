@@ -1,4 +1,4 @@
-package com.example.smallTools.proxy.classloader;
+package com.example.smallTools.javabasic.proxy.classloader;
 
 /**
  * @Author: woodyiiiiiii

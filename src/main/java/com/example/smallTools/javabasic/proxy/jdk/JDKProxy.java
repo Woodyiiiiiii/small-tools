@@ -1,4 +1,4 @@
-package com.example.smallTools.proxy.jdk;
+package com.example.smallTools.javabasic.proxy.jdk;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

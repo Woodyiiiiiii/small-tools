@@ -1,4 +1,4 @@
-package com.example.smallTools.proxy.aspectapi;
+package com.example.smallTools.javabasic.proxy.aspectapi;
 
 import org.aspectj.lang.annotation.Aspect;
 

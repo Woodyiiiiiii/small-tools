@@ -1,4 +1,4 @@
-package com.example.smallTools.proxy.cglib;
+package com.example.smallTools.javabasic.proxy.cglib;
 
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;

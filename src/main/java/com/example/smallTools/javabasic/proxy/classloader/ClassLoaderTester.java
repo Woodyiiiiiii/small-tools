@@ -1,4 +1,4 @@
-package com.example.smallTools.proxy.classloader;
+package com.example.smallTools.javabasic.proxy.classloader;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

@@ -1,7 +1,7 @@
-package com.example.smallTools.proxy.cglib;
+package com.example.smallTools.javabasic.proxy.cglib;
 
-import com.example.smallTools.proxy.HelloService;
-import com.example.smallTools.proxy.HelloServiceImpl;
+import com.example.smallTools.javabasic.proxy.HelloService;
+import com.example.smallTools.javabasic.proxy.HelloServiceImpl;
 
 /**
  * @Author: woodyiiiiiii
